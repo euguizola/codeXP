@@ -21,10 +21,10 @@ function setActiveUri(a) {
     a.classList.add('active')
 }
 
-window.addEventListener('load', () => {
+window.addEventListener('load', (e) => {
     let pos = window.location.href.search('#')
     let ref = window.location.href.substring(pos, window.location.href.length)
-    if (ref !== '') {
+    if (ref !== '' && window.pageYOffset > 0) {
         document.querySelector('header').classList.add('scroll')
         document.querySelectorAll('nav ul li a').forEach(a => {
             if (a.href === window.location.href) {
