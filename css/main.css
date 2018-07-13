@@ -77,6 +77,9 @@ header {
   transition: all 0.3s ease;
   z-index: 1001;
 }
+header .hamburger {
+  display: none;
+}
 header.scroll {
   background-color: white;
   padding-top: 20px;
@@ -118,10 +121,15 @@ header .container nav ul li {
   padding-left: 10px;
 }
 header .container nav ul li a {
+  padding-bottom: 8px;
   color: #4d4d4d;
 }
 header .container nav ul li a:hover {
   color: #ed1e79;
+}
+header .container nav ul li a.active {
+  color: #ed1e79;
+  border-bottom: 3px solid #ed1e79;
 }
 
 main #sobre {
@@ -146,7 +154,7 @@ main #sobre .the-code img#c1 {
 main #sobre .the-code #about {
   max-width: 400px;
   color: #666666;
-  font-size: 18px;
+  font-size: 20px;
 }
 main #sobre .the-code #about img {
   width: 100%;
@@ -207,6 +215,7 @@ main .edicao .sobre-edicao .top-details .top .jp {
   max-width: 364px;
   max-height: 125px;
   width: 100%;
+  padding-right: 10px;
 }
 main .edicao .sobre-edicao .top-details .details {
   display: flex;
@@ -541,6 +550,39 @@ main #senaisp .container p a {
 
   .the-code img#c1 {
     display: none;
+  }
+
+  #sobre {
+    padding-top: 180px;
+  }
+
+  header .hamburger {
+    display: block;
+    z-index: 1005;
+  }
+  header nav {
+    position: absolute;
+    right: -75%;
+    height: 100vh;
+    width: 75%;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.95);
+    box-shadow: -5px -5px 5px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    will-change: right;
+  }
+  header nav ul {
+    flex-direction: column;
+  }
+  header nav ul li {
+    font-size: 26px;
+    margin: 15px 0;
+  }
+  header nav.active {
+    right: 0;
   }
 }
 

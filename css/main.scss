@@ -91,6 +91,9 @@ header {
     padding-top: 80px;
     transition: all 0.3s ease;
     z-index: 1001;
+    .hamburger {
+        display: none;
+    }
     &.scroll {
         background-color: white;
         padding-top: 20px;
@@ -134,9 +137,14 @@ header {
                 li {
                     padding-left: 10px; 
                     a {
+                        padding-bottom: 8px;
                         color: $dark-gray;
                         &:hover {
                             color: $pink;
+                        }
+                        &.active {
+                            color: $pink;
+                            border-bottom: 3px solid $pink;
                         }
                     }
                 }
@@ -166,7 +174,7 @@ main {
             #about {
                 max-width: 400px;
                 color: $gray;
-                font-size: 18px;
+                font-size: 20px;
                 img {
                     width: 100%;
                 }
@@ -226,6 +234,7 @@ main {
                         max-width: 364px;
                         max-height: 125px;
                         width: 100%;
+                        padding-right: 10px;
                     }
                 }
                 .details {
@@ -577,6 +586,39 @@ main {
     .the-code {
         img#c1 {
             display: none;
+        }
+    }
+    #sobre {
+        padding-top: 180px;
+    }
+    header {
+        .hamburger {
+            display: block;
+            z-index: 1005;
+        }
+        nav {
+            position: absolute;
+            right: -75%;
+            height: 100vh;
+            width: 75%;
+            top: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgba(255,255,255, 0.95);
+            box-shadow: -5px -5px 5px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            will-change: right;
+            ul {
+                flex-direction: column;
+                li {
+                    font-size: 26px;
+                    margin: 15px 0;
+                }
+            }
+            &.active {
+                right: 0;
+            }
         }
     }
 }
