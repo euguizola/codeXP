@@ -26,7 +26,7 @@ section {
 }
 
 section .container {
-  min-height: 100vh;
+  min-height: 90vh;
 }
 
 .container {
@@ -54,12 +54,22 @@ section .container {
   color: #763acc;
 }
 
+.red {
+  color: #c0272d;
+}
+
 header {
   padding: 20px 0;
   position: fixed;
   margin: auto;
   width: 100%;
-  top: 80px;
+  padding-top: 80px;
+  transition: all 0.3s ease;
+  z-index: 1001;
+}
+header.scroll {
+  background-color: white;
+  padding-top: 20px;
 }
 header .container {
   justify-content: space-between;
@@ -334,6 +344,35 @@ main #edicao-1 .details .block .details-about span {
 main #edicao-1 .profile-partners {
   background-image: none;
 }
+main #image img {
+  width: 100vw;
+}
+main #senaisp {
+  background-image: url("../images/senai.jpg");
+  background-repeat: no-repeat;
+}
+main #senaisp .container {
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+main #senaisp .container .logo-senai {
+  max-width: 400px;
+  margin: 50px 0;
+}
+main #senaisp .container .red {
+  color: #c0272d;
+}
+main #senaisp .container p {
+  max-width: 750px;
+  line-height: 32px;
+  color: #666666;
+}
+main #senaisp .container p a {
+  color: #000;
+}
+
 @media (max-width: 768px) {
   .container {
     padding: 10px 20px;

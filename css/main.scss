@@ -3,6 +3,8 @@ $green: #65c6bc;
 $purple: #763acc;
 $pink: #ed1e79;
 
+$red: #c0272d;
+
 $gray: #666666;
 $dark-gray: #4d4d4d;
 $white: #ffffff;
@@ -37,7 +39,7 @@ section {
 }
 
 section .container {
-    min-height: 100vh;
+    min-height: 90vh;
 }
 
 // My tags
@@ -66,13 +68,23 @@ section .container {
     color: $purple;
 }
 
+.red {
+    color: $red;
+}
+
 // Header
 header {
     padding: 20px 0;
     position: fixed;
     margin: auto;
     width: 100%;
-    top: 80px;
+    padding-top: 80px;
+    transition: all 0.3s ease;
+    z-index: 1001;
+    &.scroll {
+        background-color: white;
+        padding-top: 20px;
+    }
     .container {
         justify-content: space-between;
         align-items: center;
@@ -359,6 +371,36 @@ main {
             background-image: none;
             .profile {
                 
+            }
+        }
+    }
+    #image {
+        img {
+            width: 100vw;
+        }
+    }
+    #senaisp {
+        background-image: url('../images/senai.jpg');
+        background-repeat: no-repeat;
+        .container {
+            flex-direction: column;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+            .logo-senai {
+                max-width: 400px;
+                margin: 50px 0;
+            }
+            .red {
+                color: $red;
+            }
+            p {
+                max-width: 750px;
+                line-height: 32px;
+                color: $gray;
+                a{
+                    color: #000;
+                }
             }
         }
     }
