@@ -29,6 +29,16 @@ section .container {
   min-height: 90vh;
 }
 
+button {
+  background-color: transparent;
+  border: none;
+  transition: all 0.3s ease;
+}
+button:hover {
+  cursor: pointer;
+  opacity: 0.3;
+}
+
 .container {
   display: flex;
   width: 100%;
@@ -71,6 +81,14 @@ header.scroll {
   background-color: white;
   padding-top: 20px;
 }
+header.scroll .container #logo #logo-codexp {
+  display: block;
+  opacity: 1;
+}
+header.scroll .container #logo #logo-senai {
+  display: none;
+  opacity: 0;
+}
 header .container {
   justify-content: space-between;
   align-items: center;
@@ -78,8 +96,14 @@ header .container {
 header .container #logo svg {
   max-width: 180px;
 }
+header .container #logo #logo-senai {
+  opacity: 1;
+  transition: all 0.3s ease;
+}
 header .container #logo #logo-codexp {
   display: none;
+  opacity: 0;
+  transition: all 0.3s ease;
 }
 header .container nav {
   width: 70%;
@@ -330,6 +354,100 @@ main .edicao .profile-partners .partners .partners-list div {
 main .edicao .profile-partners .partners .partners-list div img {
   align-self: center;
   margin: 10px;
+}
+main #projetos {
+  padding: 0;
+}
+main #projetos .container {
+  padding: 120px 0;
+  min-height: auto;
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main #projetos .container h2 {
+  font-size: 32px;
+  letter-spacing: 10px;
+}
+main #projetos .container .slider {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main #projetos .container .slider .slider-content {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main #projetos .container .slider .slider-content .content {
+  min-width: 80%;
+  display: flex;
+  padding: 0 10px;
+}
+main #depoimentos {
+  background-color: #f16152;
+  padding: 0;
+  min-height: 50vh;
+}
+main #depoimentos .container {
+  flex-direction: column;
+  color: white;
+  justify-content: center;
+  min-height: unset;
+  padding: 150px 0;
+}
+main #depoimentos .container h2 {
+  text-align: center;
+  padding: 10px 0;
+}
+main #depoimentos .container .slider {
+  display: flex;
+  flex-direction: column;
+}
+main #depoimentos .container .slider .slider-content {
+  display: flex;
+}
+main #depoimentos .container .slider .slider-content .content {
+  display: flex;
+  padding: 0 60px;
+}
+main #depoimentos .container .slider .slider-content .content img {
+  max-height: 30px;
+  min-height: 30px;
+}
+main #depoimentos .container .slider .slider-content .content div {
+  display: flex;
+  flex-direction: column;
+  padding: 0 20px;
+}
+main #depoimentos .container .slider .slider-content .content div blockquote {
+  font-size: 24px;
+  letter-spacing: 4px;
+  padding: 20px 0;
+  margin: 0;
+  min-height: 120px;
+}
+main #depoimentos .container .slider .slides {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  padding-top: 50px;
+}
+main #depoimentos .container .slider .slides li {
+  display: block;
+  content: " ";
+  width: 10px;
+  height: 10px;
+  background-color: white;
+  padding: 5px;
+  border-radius: 50px;
+  margin: 0 10px;
+}
+main #depoimentos .container .slider .slides li.active {
+  background-color: #65c6bc;
 }
 main #edicao-1 {
   background-color: unset;

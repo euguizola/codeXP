@@ -42,6 +42,16 @@ section .container {
     min-height: 90vh;
 }
 
+button {
+    background-color: transparent;
+    border: none;
+    transition: all 0.3s ease;
+    &:hover {
+        cursor: pointer;
+        opacity: 0.3;
+    }
+}
+
 // My tags
 .container {
     display: flex;
@@ -84,6 +94,18 @@ header {
     &.scroll {
         background-color: white;
         padding-top: 20px;
+        .container {
+            #logo {
+                #logo-codexp {
+                    display: block;
+                    opacity: 1;
+                }
+                #logo-senai {
+                    display: none;
+                    opacity: 0;
+                }
+            }
+        }
     }
     .container {
         justify-content: space-between;
@@ -92,8 +114,14 @@ header {
             svg {
                 max-width: 180px;
             }
+            #logo-senai {
+                opacity: 1;
+                transition: all 0.3s ease;
+            }
             #logo-codexp {
                 display: none;
+                opacity: 0;
+                transition: all 0.3s ease;
             }
         }
         nav {
@@ -346,6 +374,100 @@ main {
                         img {
                             align-self: center;
                             margin: 10px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    #projetos {
+        padding: 0;
+        .container {
+            padding: 120px 0;
+            min-height: auto;
+            flex-direction: column;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            h2 {
+                font-size: 32px;
+                letter-spacing: 10px;
+            }
+            .slider {
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                .slider-content {
+                    width: 100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    .content {
+                        min-width: 80%;
+                        display: flex;
+                        padding: 0 10px;
+                    }
+                }
+            }
+        }
+    }
+    #depoimentos {
+        background-color: $orange;
+        padding: 0;
+        min-height: 50vh;
+        .container {
+            flex-direction: column;
+            color: white;
+            justify-content: center;
+            min-height: unset;
+            padding: 150px 0;
+            h2 {
+                text-align: center;
+                padding: 10px 0;
+            }
+            .slider {
+                display: flex;
+                flex-direction: column;
+                .slider-content {
+                    display: flex;
+                    .content {
+                        display: flex;
+                        padding: 0 60px;
+                        img {
+                            max-height: 30px;
+                            min-height: 30px;
+                        }
+                        div {
+                            display: flex;
+                            flex-direction: column;
+                            padding: 0 20px;
+                            blockquote {
+                                font-size: 24px;
+                                letter-spacing: 4px;
+                                padding: 20px 0;
+                                margin: 0;
+                                min-height: 120px;
+                            }
+                        }
+                    }
+                }
+                .slides {
+                    display: flex;
+                    width: 100%;
+                    justify-content: center;
+                    padding-top: 50px;
+                    li {
+                        display: block;
+                        content: ' ';
+                        width: 10px;
+                        height: 10px;
+                        background-color: white;
+                        padding: 5px;
+                        border-radius: 50px;
+                        margin: 0 10px;
+                        &.active {
+                            background-color: $green;
                         }
                     }
                 }
