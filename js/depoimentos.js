@@ -18,39 +18,45 @@ const depoimentos = [
 ]
 
 var active = 0;
-var slider = document.querySelector('#depoimentos .slider')
+var sliderDepoimentos = document.querySelector('#depoimentos .slider')
 
-function setActive() {
-    slider.querySelector('blockquote').innerText = depoimentos[active].texto
-    slider.querySelector('.author').innerText = depoimentos[active].autor
-    slider.querySelector('.slides').innerHTML = ''
+function setActiveDep() {
+    sliderDepoimentos.querySelector('blockquote').innerText = depoimentos[active].texto
+    sliderDepoimentos.querySelector('.author').innerText = depoimentos[active].autor
+    sliderDepoimentos.querySelector('.slides').innerHTML = ''
     for(let i = 0 ; i < depoimentos.length ; i++){
         let li = document.createElement('li')
         if(i === active) {
             li.classList.add('active')
         }
-        slider.querySelector('.slides').appendChild(li)
+        sliderDepoimentos.querySelector('.slides').appendChild(li)
     }
+    sliderDepoimentos.querySelectorAll('.slides li').forEach((li, i) => {
+        li.addEventListener('click', ()=>{
+            active = i
+            setActiveDep()
+        })
+    })
 }
 
 function right() {
     if(active < depoimentos.length) {
         active++
     }
-    setActive()
+    setActiveDep()
 }
 
 function left() {
     if(active > 0) {
         active--;
     }
-    setActive()
+    setActiveDep()
 }
 
 function initialize() {
-    slider.querySelector('.left').addEventListener('click', left)
-    slider.querySelector('.right').addEventListener('click', right)
-    setActive()
+    sliderDepoimentos.querySelector('.leftDep').addEventListener('click', left)
+    sliderDepoimentos.querySelector('.rightDep').addEventListener('click', right)
+    setActiveDep()
 }
 
 initialize()

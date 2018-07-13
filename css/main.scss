@@ -166,6 +166,7 @@ main {
             #about {
                 max-width: 400px;
                 color: $gray;
+                font-size: 18px;
                 img {
                     width: 100%;
                 }
@@ -392,12 +393,14 @@ main {
             h2 {
                 font-size: 32px;
                 letter-spacing: 10px;
+                padding: 20px 0;
             }
             .slider {
                 width: 100%;
                 display: flex;
                 justify-content: center;
                 align-items: center;
+                flex-direction: column;
                 .slider-content {
                     width: 100%;
                     display: flex;
@@ -407,6 +410,39 @@ main {
                         min-width: 80%;
                         display: flex;
                         padding: 0 10px;
+                    }
+                }
+                .thumbs {
+                    padding: 20px 0;
+                    width: 80%;
+                    height: 150px;
+                    display: flex;
+                    overflow-x: scroll;
+                    overflow-y: hidden;
+                    li {
+                        min-width: 180px;
+                        height: 100px;
+                        display: inline-block;
+                        content: ' ';
+                        background-color: $purple;
+                        margin: 0 10px;
+                        font-size: 18px;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: flex-start;
+                        padding: 10px;
+                        .number {
+                            color: $green;
+                            font-weight: bold;
+                        }
+                        span {
+                            color: white;
+                            font-weight: bold;
+                        }
+                        &.active {
+                            background-color: $pink;
+                        }
                     }
                 }
             }
@@ -468,6 +504,9 @@ main {
                         margin: 0 10px;
                         &.active {
                             background-color: $green;
+                        }
+                        &:hover {
+                            cursor: pointer;
                         }
                     }
                 }

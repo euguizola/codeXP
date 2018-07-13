@@ -146,6 +146,7 @@ main #sobre .the-code img#c1 {
 main #sobre .the-code #about {
   max-width: 400px;
   color: #666666;
+  font-size: 18px;
 }
 main #sobre .the-code #about img {
   width: 100%;
@@ -369,12 +370,14 @@ main #projetos .container {
 main #projetos .container h2 {
   font-size: 32px;
   letter-spacing: 10px;
+  padding: 20px 0;
 }
 main #projetos .container .slider {
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
 }
 main #projetos .container .slider .slider-content {
   width: 100%;
@@ -386,6 +389,39 @@ main #projetos .container .slider .slider-content .content {
   min-width: 80%;
   display: flex;
   padding: 0 10px;
+}
+main #projetos .container .slider .thumbs {
+  padding: 20px 0;
+  width: 80%;
+  height: 150px;
+  display: flex;
+  overflow-x: scroll;
+  overflow-y: hidden;
+}
+main #projetos .container .slider .thumbs li {
+  min-width: 180px;
+  height: 100px;
+  display: inline-block;
+  content: " ";
+  background-color: #763acc;
+  margin: 0 10px;
+  font-size: 18px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 10px;
+}
+main #projetos .container .slider .thumbs li .number {
+  color: #65c6bc;
+  font-weight: bold;
+}
+main #projetos .container .slider .thumbs li span {
+  color: white;
+  font-weight: bold;
+}
+main #projetos .container .slider .thumbs li.active {
+  background-color: #ed1e79;
 }
 main #depoimentos {
   background-color: #f16152;
@@ -448,6 +484,9 @@ main #depoimentos .container .slider .slides li {
 }
 main #depoimentos .container .slider .slides li.active {
   background-color: #65c6bc;
+}
+main #depoimentos .container .slider .slides li:hover {
+  cursor: pointer;
 }
 main #edicao-1 {
   background-color: unset;
