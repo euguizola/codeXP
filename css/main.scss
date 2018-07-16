@@ -36,6 +36,7 @@ a {
 section {
     min-width: 100vw;
     padding-top: 80px;
+    width: 100%;
 }
 
 section .container {
@@ -114,6 +115,8 @@ header {
         justify-content: space-between;
         align-items: center;
         #logo {
+            width: 100%;
+            max-width: 200px;
             svg {
                 max-width: 180px;
             }
@@ -154,6 +157,7 @@ header {
 }
 
 main {
+    width: 100vw;
     #sobre {
         background-image: url('../images/bg-1.jpg');
         background-size: 100%;
@@ -343,6 +347,8 @@ main {
                 img {
                     max-height: 500px;
                     padding: 10px;
+                    width: 100%;
+                    max-width: 500px;
                 }
                 .profile-details {
                     padding: 0 50px;
@@ -467,6 +473,8 @@ main {
             justify-content: center;
             min-height: unset;
             padding: 150px 0;
+            overflow-x: hidden;
+            width: 100vw;
             h2 {
                 text-align: center;
                 padding: 10px 0;
@@ -493,6 +501,7 @@ main {
                                 padding: 20px 0;
                                 margin: 0;
                                 min-height: 120px;
+                                word-wrap: break-word;
                             }
                         }
                     }
@@ -592,6 +601,10 @@ main {
         padding-top: 180px;
     }
     header {
+        padding: 5px 0;
+        &.scroll {
+            padding-top: 0;
+        }
         .hamburger {
             display: block;
             z-index: 1005;
@@ -620,5 +633,66 @@ main {
                 right: 0;
             }
         }
+    }
+    #depoimentos {
+        .container {
+            .slider {
+                .slider-content {
+                    .content {
+                        padding: 0!important;
+                        img {
+                            display: none;
+                        }
+                        div {
+                            blockquote {
+                                font-size: 24px;
+                                letter-spacing: 4px;
+                                padding: 0 0;
+                                margin: 0;
+                                min-height: 120px;
+                                word-wrap: break-word;
+                            }
+                        }
+                    }
+                }
+                .slides {
+                    display: flex;
+                    width: 100%;
+                    justify-content: center;
+                    padding-top: 50px;
+                    li {
+                        display: block;
+                        content: ' ';
+                        width: 10px;
+                        height: 10px;
+                        background-color: white;
+                        padding: 5px;
+                        border-radius: 50px;
+                        margin: 0 10px;
+                        &.active {
+                            background-color: $green;
+                        }
+                        &:hover {
+                            cursor: pointer;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    main .edicao .quantity {
+        flex-direction: column;
+        div {
+            h3 {
+                font-size: 48px;
+            }
+            h4 {
+                font-size: 24px;
+            }
+        }
+    }
+    .arrow img{
+        min-width: 20px;
+        width: 100%;
     }
 }

@@ -23,6 +23,7 @@ a {
 section {
   min-width: 100vw;
   padding-top: 80px;
+  width: 100%;
 }
 
 section .container {
@@ -96,6 +97,10 @@ header .container {
   justify-content: space-between;
   align-items: center;
 }
+header .container #logo {
+  width: 100%;
+  max-width: 200px;
+}
 header .container #logo svg {
   max-width: 180px;
 }
@@ -132,6 +137,9 @@ header .container nav ul li a.active {
   border-bottom: 3px solid #ed1e79;
 }
 
+main {
+  width: 100vw;
+}
 main #sobre {
   background-image: url("../images/bg-1.jpg");
   background-size: 100%;
@@ -323,6 +331,8 @@ main .edicao .profile-partners .profile {
 main .edicao .profile-partners .profile img {
   max-height: 500px;
   padding: 10px;
+  width: 100%;
+  max-width: 500px;
 }
 main .edicao .profile-partners .profile .profile-details {
   padding: 0 50px;
@@ -443,6 +453,8 @@ main #depoimentos .container {
   justify-content: center;
   min-height: unset;
   padding: 150px 0;
+  overflow-x: hidden;
+  width: 100vw;
 }
 main #depoimentos .container h2 {
   text-align: center;
@@ -474,6 +486,7 @@ main #depoimentos .container .slider .slider-content .content div blockquote {
   padding: 20px 0;
   margin: 0;
   min-height: 120px;
+  word-wrap: break-word;
 }
 main #depoimentos .container .slider .slides {
   display: flex;
@@ -556,6 +569,12 @@ main #senaisp .container p a {
     padding-top: 180px;
   }
 
+  header {
+    padding: 5px 0;
+  }
+  header.scroll {
+    padding-top: 0;
+  }
   header .hamburger {
     display: block;
     z-index: 1005;
@@ -583,6 +602,58 @@ main #senaisp .container p a {
   }
   header nav.active {
     right: 0;
+  }
+
+  #depoimentos .container .slider .slider-content .content {
+    padding: 0 !important;
+  }
+  #depoimentos .container .slider .slider-content .content img {
+    display: none;
+  }
+  #depoimentos .container .slider .slider-content .content div blockquote {
+    font-size: 24px;
+    letter-spacing: 4px;
+    padding: 0 0;
+    margin: 0;
+    min-height: 120px;
+    word-wrap: break-word;
+  }
+  #depoimentos .container .slider .slides {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    padding-top: 50px;
+  }
+  #depoimentos .container .slider .slides li {
+    display: block;
+    content: " ";
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    padding: 5px;
+    border-radius: 50px;
+    margin: 0 10px;
+  }
+  #depoimentos .container .slider .slides li.active {
+    background-color: #65c6bc;
+  }
+  #depoimentos .container .slider .slides li:hover {
+    cursor: pointer;
+  }
+
+  main .edicao .quantity {
+    flex-direction: column;
+  }
+  main .edicao .quantity div h3 {
+    font-size: 48px;
+  }
+  main .edicao .quantity div h4 {
+    font-size: 24px;
+  }
+
+  .arrow img {
+    min-width: 20px;
+    width: 100%;
   }
 }
 
