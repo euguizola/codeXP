@@ -92,6 +92,8 @@ header {
     padding-top: 80px;
     transition: all 0.3s ease;
     z-index: 1001;
+    top: 0;
+    left: 0;
     .hamburger {
         display: none;
     }
@@ -197,6 +199,9 @@ main {
                 width: 100%;
                 word-wrap: break-word;
                 text-align: center;
+            }
+            .jp {
+                width: 100%;
             }
         }
     }
@@ -603,7 +608,7 @@ main {
     header {
         padding: 5px 0;
         &.scroll {
-            padding-top: 0;
+            padding-top: 0px;
         }
         .hamburger {
             display: block;
